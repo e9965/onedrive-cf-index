@@ -1,8 +1,8 @@
 name = "drive"
 type = "webpack"
 workers_dev = true
-account_id = "b87997a496f985b46b927b3f24c61de1"
-zone_id = "b04152d2c33ff4653cec1a579be6d42a"
+account_id = "c52b7ed0f0646dea32a28e15b062cb11"
+zone_id = "2c5c8810dcd5af2f5c6eb5659ec8ba53"
 
 [env.staging]
 name = "drive-staging"
