@@ -43,13 +43,41 @@ export function renderHTML(body, pLink, pIdx) {
       <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/turbolinks@5.2.0/dist/turbolinks.min.js"></script>
+      <script type="text/javascript">
+        var FinalTime = 1648771200000;
+        var STime = 1609835400000;
+        setInterval(function() {
+          NotRetain();
+        }, 500)
+        function NotRetain() {
+        var NowTime = parseInt(new Date().getTime() );
+        var time = parseInt((FinalTime - NowTime) / 1000)
+        var tenminute = parseInt(time/600);
+        var leftday = parseInt(tenminute/144);
+        document.getElementById("eminute").innerHTML = tenminute;
+        document.getElementById("eleftday").innerHTML = leftday;
+        var SEtime = parseInt((STime - NowTime) / 1000)
+        var Stenminute = parseInt(SEtime/600);
+        var Sleftday = parseInt(Stenminute/144);
+        document.getElementById("seminute").innerHTML = Stenminute;
+        document.getElementById("seleftday").innerHTML = Sleftday;
+        }
+      </script>
     </head>
     <body>
-      <nav id="navbar" data-turbolinks-permanent><div class="brand">📁 開車學習</div></nav>
+      <nav id="navbar" data-turbolinks-permanent><div class="brand">📁 Kenny's Study Materials on Onedrive</div></nav>
       ${body}
       <div class="paginate-container">${pagination(pIdx)}</div>
       <div id="flex-container" data-turbolinks-permanent style="flex-grow: 1;"></div>
-      <footer id="footer" data-turbolinks-permanent><p>Powered by <a href="https://github.com/spencerwooo/onedrive-cf-index">onedrive-cf-index</a>, hosted on <a href="https://www.cloudflare.com/products/cloudflare-workers/">Cloudflare Workers</a>.</p></footer>
+      <footer id="footer" data-turbolinks-permanent>
+      <p>Powered by <a href="https://github.com/spencerwooo/onedrive-cf-index">onedrive-cf-index</a>, hosted on <a href="https://www.cloudflare.com/products/cloudflare-workers/">Cloudflare Workers</a>.</p>
+      <p class="hero-text">
+      距離F5-1st-Exam開始剩下：
+      <span id="seminute"></span> 個十分鐘 ( 共 <span id="seleftday"></span> 天 ）<br>
+      距離DSE開始剩下：
+      <span id="eminute"></span> 個十分鐘 ( 共 <span id="eleftday"></span> 天 ）
+      </p>
+      </footer>
       <script>
         if (typeof ap !== "undefined" && ap.paused !== true) {
           ap.pause()

@@ -49,8 +49,8 @@ export async function renderFolderView(items, path, request) {
     )
 
   const intro = `<div class="intro markdown-body" style="text-align: left; margin-top: 2rem;">
-                    <h2>Drive Bus👋</h2>
-                    <p>Free Microsoft E5 Developer 5T Onedrive</p>
+                    <h2>Kenny Pure_Co2Fe👋</h2>
+                    <p>考試加油呀！</p>
                     <p><a href="https://nthyk.me">Blog</a> · <a href="https://github.com/e9965">GitHub</a></p>
                   </div>`
 
