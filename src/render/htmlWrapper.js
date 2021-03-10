@@ -45,7 +45,7 @@ export function renderHTML(body, pLink, pIdx) {
       <script src="https://cdn.jsdelivr.net/npm/turbolinks@5.2.0/dist/turbolinks.min.js"></script>
       <script type="text/javascript">
         var FinalTime = 1648771200000;
-        var STime = 1609835400000;
+        var STime = 1623025800000;
         setInterval(function() {
           NotRetain();
         }, 500)
